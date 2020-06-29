@@ -1,5 +1,5 @@
- // let data = {
- //   photo : 'images/caffe.jpg',
+ // let data = {                                                   //ezekkel(1-34.sorig) csináltam azt a data változót,amibe elmentettem a képet meg a nevét,hogy innen töltse be,ne html-ből.
+ //   photo : 'images/caffe.jpg',                                 //Lehet ezt kell tömbbe tenni és nem a 42. sorban
  //   title : 'My caffe'
  // };
 
@@ -33,8 +33,8 @@
  //   title : 'Cocktail'
  // };
 
-$(document).ready(function(){
-$('#photo').attr('src', data.photo);
+$(document).ready(function(){                                                   //ez kell ahhoz,hogy ki is rakja a képet.
+$('#photo').attr('src', data.photo);                                            //a html-ben beállítottam ezt a 2 id-t,így rakta be a képet meg hozzá a címet
 $('#title').text(data.title);
 });
 

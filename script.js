@@ -40,6 +40,7 @@ $('#title').text(data.title);
 
 let currentPhoto = 0;
 let imagesData = ['images/caffe.jpg', 'images/breakfast.jpg', 'images/burrito-chicken.jpg', 'images/ham-burger.jpg', 'images/pancake.jpg', 'images/cocktails.jpg', 'images/cocktail.jpg'];
+
 $('#photo').attr('src', imagesData[currentPhoto].photo);
 
 // let currentTitle = 0;
@@ -51,7 +52,7 @@ let loadPhoto = (photoNumber) => {
 
 }
 
-// loadPhoto(currentPhoto);
+loadPhoto(currentPhoto);
 
 $('#right').click(() => {
   if(currentPhoto < 6) {
@@ -61,7 +62,7 @@ $('#right').click(() => {
 });
 
 $('#left').click(() => {
-  if(currentPhoto > 1) {
+  if(currentPhoto > 0) {
     currentPhoto--;
   loadPhoto(currentPhoto);
 }

@@ -6,7 +6,10 @@ let data = {
 $(document).ready(function(){
 $('#photo').attr('src', data.photo);
 $('#title').text(data.title);
-$('#small').attr('src', data.photo);
+$('#small').attr('src', data.photo);                       //ez nem is kellene,ha az imagesData.forEach-el csinálom,igaz?
+
+});
+
 });
 
 let currentPhoto = 0;
@@ -33,6 +36,6 @@ $('#left').click(() => {
 });
 
 imagesData.forEach((item, index) => {
-  $('#thumb').append(`<div class="thumbnails img" data-index="${index}">${item.photo} (data-index="${index}")</div>`);
+  $('#thumb').append(`<div class="thumbnails img" data-index="${index}">${item.photo} (data-index="${index}")</div>`);    //megmondom őszintén,meg úgy is látod,h másoltam.De nem csak úgy.Azért olvastam is. Annak nem lenne értelme,ha szószerint másolnék. Addig ok,h forEach meg append-el adom hozzá a képeket. De nem jövök rá mit kell beállítani,mert szöveg jön be. 
 
 });

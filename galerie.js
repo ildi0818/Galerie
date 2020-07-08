@@ -1,4 +1,4 @@
- let data = {
+let data = {
    photo : 'images/caffe.jpg',
    title : 'My caffe'
  };
@@ -6,6 +6,7 @@
 $(document).ready(function(){
 $('#photo').attr('src', data.photo);
 $('#title').text(data.title);
+$('#small').attr('src', data.photo);
 });
 
 let currentPhoto = 0;
@@ -29,4 +30,9 @@ $('#left').click(() => {
     currentPhoto--;
   loadPhoto(currentPhoto);
 }
+});
+
+imagesData.forEach((item, index) => {
+  $('#thumb').append(`<div class="thumbnails img" data-index="${index}">${item.photo} (data-index="${index}")</div>`);
+
 });

@@ -6,7 +6,7 @@ let data = {
 $(document).ready(function(){
 $('#photo').attr('src', data.photo);
 $('#title').text(data.title);
-$('#small').attr('src', data.photo);                       //ez nem is kellene,ha az imagesData.forEach-el csinálom,igaz?
+// $('#small').attr('src', data.photo);                       //ez nem is kellene,ha az imagesData.forEach-el csinálom,igaz?
 });
 
 let currentPhoto = 0;
